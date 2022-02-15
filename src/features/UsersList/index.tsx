@@ -1,7 +1,10 @@
 import { useGetUsersQuery } from 'services';
+import { useAppDispatch } from 'store/hooks';
+import { setUserId } from 'store/slices';
 
 export const UsersList = () => {
 	const { data: users = [], isFetching, isError } = useGetUsersQuery();
+	const dispatch = useAppDispatch();
 
 	if (isFetching) {
 		return <h1>Loading...</h1>;
@@ -14,7 +17,7 @@ export const UsersList = () => {
 	return (
 		<ul>
 			{users.map(({ id, name }) => (
-				<li key={id} className="list-item">
+				<li key={id} className="list-item" onClick={() => dispatch(setUserId(id))}>
 					{name}
 				</li>
 			))}
