@@ -7,6 +7,13 @@
 body,
 html {
 	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+h1,
+h2 {
+	font-weight: 500;
+	margin: 0;
 }
 
 li {
@@ -32,4 +39,18 @@ li {
 .list-item:hover {
 	border: 1px solid #ccc;
 	transform: scale(1.025);
+}
+
+.user-card {
+	padding: 15px 10px;
+	border: 1px solid #eee;
+	margin-bottom: 10px;
+}
+
+.flex {
+	display: flex;
+}
+
+.justify-between {
+	justify-content: space-between;
 }

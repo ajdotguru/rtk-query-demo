@@ -1,6 +1,7 @@
 import { useAppSelector } from 'store/hooks';
 import { selectSelectedUserId } from 'store/slices';
 import { useGetUserQuery } from 'services';
+import { UserCard } from 'components';
 
 interface IUserDetailsProps {
 	id: number;
@@ -21,17 +22,7 @@ const UserDetails: React.FC<IUserDetailsProps> = ({ id }): JSX.Element => {
 		return <></>;
 	}
 
-	const { name, username, email, phone, website } = user;
-
-	return (
-		<>
-			<h1>{name}</h1>
-			<h2>{username}</h2>
-			<p>Email: {email}</p>
-			<p>Phone: {phone}</p>
-			<p>Website: {website}</p>
-		</>
-	);
+	return <UserCard user={user} />;
 };
 
 export const UserDetailsContainer = () => {
