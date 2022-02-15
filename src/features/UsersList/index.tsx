@@ -14,7 +14,9 @@ export const UsersList = () => {
 	return (
 		<ul>
 			{users.map(({ id, name }) => (
-				<li key={id}>{name}</li>
+				<li key={id} className="list-item">
+					{name}
+				</li>
 			))}
 		</ul>
 	);

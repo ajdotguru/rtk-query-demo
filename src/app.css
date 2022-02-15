@@ -1,0 +1,35 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+*,
+body,
+html {
+	font-family: 'Montserrat', sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	max-width: 1200px;
+	min-height: 100vh;
+	/* background: #eee; */
+	margin: 0 auto;
+}
+
+.list-item {
+	padding: 15px 10px;
+	border: 1px solid #eee;
+	margin-bottom: 10px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.list-item:hover {
+	border: 1px solid #ccc;
+	transform: scale(1.025);
+}
