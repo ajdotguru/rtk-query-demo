@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { jsonplaceholderApi } from 'services/jsonplaceholderApi';
 
 export const store = configureStore({
-	reducer: {},
-	middleware: getDefaultMiddleware => getDefaultMiddleware().concat(),
+	reducer: {
+		[jsonplaceholderApi.reducerPath]: jsonplaceholderApi.reducer,
+	},
+	middleware: getDefaultMiddleware => getDefaultMiddleware().concat(jsonplaceholderApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
