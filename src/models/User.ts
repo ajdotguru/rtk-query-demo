@@ -6,3 +6,5 @@ export interface IUser {
 	phone: string;
 	website: string;
 }
+
+export type IUsers = Pick<IUser, 'id' | 'name'>[];
